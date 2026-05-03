@@ -1,0 +1,423 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Mon css */
+@font-face {
+    font-family: PlusJakartaSans ;
+    src: local(PlusJakartaSans), url(fonts/PlusJarkataSans);
+}
+/* HEADER */
+.titreSite{
+    font-family: PlusJakartaSans ;
+    size: 150rem;
+    font-weight: 700;   
+    color: rgb(46, 46, 46);
+    letter-spacing: -0.05rem;
+    word-spacing: 0.1rem;
+}
+.header{
+    background-color: rgb(255, 255, 255);
+    border: 1.5px solid rgba(190, 190, 190, 0.43);
+    font: 1.5em sans-serif;
+    font-family: PlusJakartaSans ;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 5.5rem;
+    position: sticky; 
+    top: 0;
+    z-index: 999; 
+    /* Pourquoi z-index ? ça a l'air de fonctionner sans */
+}
+.navigation{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+}
+.signUpButton{
+    background-color: rgba(200, 20, 17);
+    border: none;
+    color: white;
+    padding: 0.8rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    box-shadow:  0rem 0.4rem 0.8rem  rgb(192, 119, 118);
+
+}
+.logInButton{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: rgb(34, 34, 34);
+    padding: 0.8rem 2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9rem;
+    cursor: pointer;
+
+}
+.navButtons{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: rgba(0, 0, 0, 0.632);
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+}
+.navButtons1{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    color: rgba(200, 20, 17);
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: underline rgba(200, 20, 17);
+    text-underline-offset: 0.5rem;
+    text-decoration-thickness: 0.1rem ;
+}
+/* comment controler la ligne en dessous sans modifier la taille du button */
+
+
+/* MAIN */
+.lignKaguyaSamurai{
+    font-family: PlusJakartaSans ;
+    display: flex;
+    margin: 10rem 15rem;
+    align-items: center;
+    
+}
+.blueBackground{
+    background-color: rgba(0, 115, 186);
+    color: black;
+    font-weight: bold;
+    padding: 0.5rem 2rem;
+    display: inline-block;
+    border-radius: 0.8rem;
+}
+.titreKaguya{
+    color: rgba(200, 20, 17);
+    font-size: 6rem;
+    margin: 0.8rem 0 0.1rem 0;
+    font-weight: bold;
+}
+.titreSamurai{
+    color: rgb(0, 0, 0);
+    font-size: 6rem;
+    margin: 0.1rem 0;
+    font-weight: bold;
+    
+}
+.fitImage{
+    height: 30rem;
+    width: 30rem;
+}
+.paragrapheKaguya{
+    margin: 2rem 8rem 2rem 0;
+    color: rgb(62, 62, 62);
+    text-shadow: 0 0 0.7px red;
+    font: 1.5em sans-serif;
+    letter-spacing: 0.05rem;
+    word-spacing: 0.08rem;
+    line-height: 2.3rem;
+}
+.purchaseMButton{
+    background-color: rgba(200, 20, 17);
+    border: none;
+    color: rgb(239, 239, 239);   
+    margin: 1rem 0;
+    padding: 1.2rem 2.8rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    font-weight: bold;
+}
+.technicalAnalysis{
+    background-color: none;
+    border: none;
+    color: rgb(57, 57, 57);
+    font-weight: bold;
+    margin: 1rem 0;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    text-decoration: underline rgba(200, 20, 17);
+    text-underline-offset: 0.5rem;
+    text-decoration-thickness: 0.1rem ;
+}
+.fitImageCaddie{
+    margin: 0rem 1rem -0.4rem -2.5rem;
+
+
+}
+.sectionBlue{
+    background-color: rgba(0, 115, 186);
+    height: 17rem;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    font-family: PlusJakartaSans ;
+    font-size: 1.5rem;
+}
+.listeAligneBlue{
+    display: flex;
+    flex-direction: row;
+}
+.fitImageBlue{
+    height: 2rem;
+    width: 2rem;
+    margin: 4.5rem 0rem 0rem 7rem;
+    filter: brightness(0.25)
+}
+.sectionBlueTitreh3{
+    margin: 5.3rem 0rem 0rem 1rem;
+    font-weight: bold;
+}
+.sectionBlueParagraphe{
+    margin: 1rem 45rem 0rem 10rem;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+}
+.cyberNeonArticle{
+    font-family: PlusJakartaSans ;
+    align-items: center;
+    display: flex;
+    margin: 5rem 30rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 3rem;
+    flex-direction: column;
+
+}
+.titreCyberNeonArchive{
+    margin: 5rem 5rem 0rem 5rem;
+    color: rgb(43, 43, 43);
+    font-weight: bold;
+    font-size: 3rem;
+}
+.lignSeparate{
+    border-bottom: solid rgba(200, 20, 17);
+    display: block;
+    width: 6rem;
+    margin: 1rem;
+}
+.cropImage{
+    height: 50rem;
+    width: 45rem;
+    object-fit: cover;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+}
+
+.techTitle{
+    color: rgb(62, 62, 62);
+    text-shadow: 0 0 0.5px red;
+    margin: 3rem 5rem 1rem;
+    text-transform: uppercase;
+}
+.listeAligne{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.titreTableauListe{
+    color: rgb(62, 62, 62);
+    text-shadow: 0 0 0.5px red;
+    margin: 1rem 1rem 1rem 5rem;
+}
+.variableTableauListe{
+    margin:1rem 0rem 1rem 13rem ;
+    font-weight: bold;
+}
+.variableTableauListe2{
+    margin:1rem 0rem 1rem 8.4rem ;
+    font-weight: bold;
+}
+.ligneSepTableauListe{
+    border-bottom: 0.01rem solid rgb(235, 235, 235);
+    display: block;
+    width: 25rem;
+    margin: 0 5rem;
+
+}
+.alignLigne{
+    align-items: center;
+    display: flex;
+    margin: 1rem
+}
+.editorialTitle{
+    color: rgb(62, 62, 62);
+    text-shadow: 0 0 0.5px red;
+    margin: 3rem 0;
+    text-transform: uppercase;
+}
+.paragrapheEdit{
+    color: rgb(62, 62, 62);
+    text-shadow: 0 0 0.5px red;
+    margin: 3rem 3rem 3rem 0;
+    word-spacing: 0.2rem ;
+    line-height: 1.5rem;
+}
+.reserveButton{
+    background-color: rgb(228, 228, 228);
+    border: none;
+    color: rgb(26, 26, 26);  
+    margin: 0rem 0 2rem 0;
+    padding: 1.2rem 5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0.2rem;
+    font-weight: bold;
+}
+.sectionGrey{
+    background-color: rgb(38, 44, 41);
+    font-family: PlusJakartaSans;
+    display: flex;
+    align-items: center;
+    height: 25rem;
+    flex-direction: column;
+    justify-content: center;
+
+}
+.titleTechnicalCircle{
+    font-weight: bold;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+}
+.greyParagraphe{
+    font-size: 1rem;
+    color: rgb(201, 201, 201);
+    margin:0.3rem 35rem;
+    display: flex;
+    text-align: center;
+    line-height: 1.4rem;
+}
+.mailStyle{ 
+    width: 22rem;
+    height: 2.8rem;
+    background-color: rgb(61, 67, 64);
+    margin: 3rem 0;
+    border-radius: 0.4rem;
+    border-color: rgb(112, 117, 115);
+    /* Changer style bordure ? */
+}
+.subscribeButton{
+    background-color: rgba(200, 20, 17);
+    border: none;
+    color: rgb(227, 227, 227);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    margin: 0.5rem;
+
+}
+.footer{
+    font: 0.9rem sans-serif;
+    font-family: PlusJakartaSans ;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 3rem;
+}
+
+.titreFooter{
+    font-weight: 700;
+    letter-spacing: -0.05rem;
+    font-size: 1.1rem;
+    margin : 2rem 0;
+}
+.navigationFooter{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 6rem ;
+}    
+.footerButtons{   
+    border: none;
+    color: rgb(92, 92, 92);
+    padding: 1rem 3rem;
+    text-decoration: none;
+    font-size: 0.9rem;
+    cursor: pointer;  
+    
+}
+.marginFooter{
+    display: flex;
+}
+.marginFooterBloc{
+    margin : 0 15rem;
+}
