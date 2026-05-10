@@ -1,0 +1,92 @@
+const subscribeButton = document.getElementById("subscribe");
+const maPopUp = document.createElement("div");
+
+subscribeButton.addEventListener("click",function (){
+    event.preventDefault();
+    //alert("Bouton Click");
+    //subscribeButton.innerHTML = "explose"
+    document.body.appendChild(maPopUp);
+    maPopUp.style.backgroundColor = "green";
+    maPopUp.style.height = "50px";
+    maPopUp.style.width = "50px";
+});
+
+const purchaseButtonM = document.getElementById("purchaseButtonM");
+purchaseButtonM.addEventListener("pointerover",function(){
+    purchaseButtonM.classList.add("purple");
+});
+purchaseButtonM.addEventListener("pointerout",function(){
+    purchaseButtonM.classList.remove("purple");
+});
+
+//navButtons
+
+const allNavButtons = document.querySelectorAll(".navButtons");
+allNavButtons.forEach((navButtons,index) => {
+    navButtons.addEventListener("pointerover", function(){
+        navButtons.classList.add("navButtons1");
+        navButtons.classList.remove("navButtons");
+    });
+    navButtons.addEventListener("pointerout", function(){
+        navButtons.classList.remove("navButtons1");
+        navButtons.classList.add("navButtons");
+    });
+});
+
+
+//Common 
+// modifier contenu
+
+    //subscribeButton.innerHTML =
+    //subscribeButton.innerHTML = "explose"
+    //document.body.appendChild(maPopUp);
+    // document.body.appendChild(maPopUp);
+    // maPopUp.style.backgroundColor = "green";
+    // maPopUp.style.height = "50px";
+    // maPopUp.style.width = "50px";
+
+const logInButton = document.getElementById("logInButton");
+logInButton.addEventListener("mouseover", function (){
+    logInButton.classList.add("biggerSize");
+    // logInButton.classList.remove("logInButton");
+});
+logInButton.addEventListener("mouseout", function (){
+    logInButton.classList.remove("biggerSize");
+    // logInButton.classList.add("logInButton");
+});
+
+function clear(id){
+    document.getElementById(id).innerHTML = "";
+};
+
+function addPop(id,content){
+    document.getElementById(id).innerHTML = content;
+}
+
+const maPopUpElement = document.getElementById("hiddenText");
+addPop("hiddenText","Popover content omg wow plein de texte c'est fou pitié dommage il y a pas de lorem 15 ici lol");
+
+maPopUpElement.addEventListener("toggle", (event) => {
+    if (event.newState === "open"){
+        console.log("La fenêtre contextuelle a été affichée");
+    } 
+    else {
+        console.log("La fenêtre contextuelle a été masquée");
+    };
+    
+
+});    
+
+
+const reserveButton = document.getElementById("reserveButton")
+const popReserve = document.getElementById("textHidden")
+reserveButton.addEventListener("mouseover", () => {
+    popReserve.style.visibility ="visible";
+    // popReserve.classList.add("visible");
+    // popReserve.classList.remove("invisible");
+})
+reserveButton.addEventListener("mouseout", () => {
+    popReserve.style.visibility ="hidden";
+    // popReserve.classList.add("invisible");
+    // popReserve.classList.remove("visible");
+})

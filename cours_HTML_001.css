@@ -1,3 +1,5 @@
+
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -48,24 +50,28 @@ table {
 }
 
 /* Mon css */
-@font-face {
-    font-family: PlusJakartaSans ;
-    src: local(PlusJakartaSans), url(fonts/PlusJarkataSans);
+
+html, body {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
 }
+
 /* HEADER */
+.backgroundColor{
+    background-color: rgb(235, 234, 233);
+}
 .titreSite{
-    font-family: PlusJakartaSans ;
     size: 150rem;
     font-weight: 700;   
     color: rgb(46, 46, 46);
     letter-spacing: -0.05rem;
     word-spacing: 0.1rem;
+
 }
 .header{
     background-color: rgb(255, 255, 255);
     border: 1.5px solid rgba(190, 190, 190, 0.43);
-    font: 1.5em sans-serif;
-    font-family: PlusJakartaSans ;
+    font-size: 1.5em;
+
     font-weight: bold;
     display: flex;
     flex-direction: row;
@@ -108,6 +114,11 @@ table {
     cursor: pointer;
 
 }
+.biggerSize{
+    font-size: 1.2rem;
+    padding: 0.4rem 1.56rem;
+    color: blue;
+}
 .navButtons{
     background-color: rgb(255, 255, 255);
     border: none;
@@ -138,11 +149,9 @@ table {
 
 /* MAIN */
 .lignKaguyaSamurai{
-    font-family: PlusJakartaSans ;
     display: flex;
     margin: 10rem 15rem;
-    align-items: center;
-    
+    align-items: center;  
 }
 .blueBackground{
     background-color: rgba(0, 115, 186);
@@ -173,7 +182,7 @@ table {
     margin: 2rem 8rem 2rem 0;
     color: rgb(62, 62, 62);
     text-shadow: 0 0 0.7px red;
-    font: 1.5em sans-serif;
+    font-size: 1.5em;
     letter-spacing: 0.05rem;
     word-spacing: 0.08rem;
     line-height: 2.3rem;
@@ -187,32 +196,41 @@ table {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     border-radius: 0.5rem;
     font-weight: bold;
 }
 .technicalAnalysis{
-    background-color: none;
+    background-color: transparent;
     border: none;
     color: rgb(57, 57, 57);
     font-weight: bold;
     margin: 1rem 0;
     padding: 15px 32px;
-    text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     border-radius: 0.5rem;
     text-decoration: underline rgba(200, 20, 17);
     text-underline-offset: 0.5rem;
-    text-decoration-thickness: 0.1rem ;
+    text-decoration-thickness: 0.1rem;
 }
+.wrapper {
+    position: relative;
+    display: inline-block;
+}
+.styleHidden{
+    position: absolute;
+    left: 39.5%;
+    top: 20.1%;
+    background-color: transparent;
+    margin-right: 45rem;
+}
+
 .fitImageCaddie{
     margin: 0rem 1rem -0.4rem -2.5rem;
-
-
 }
 .sectionBlue{
     background-color: rgba(0, 115, 186);
@@ -220,7 +238,7 @@ table {
     display: flex;
     flex-direction: column;
     align-items: left;
-    font-family: PlusJakartaSans ;
+
     font-size: 1.5rem;
 }
 .listeAligneBlue{
@@ -243,7 +261,6 @@ table {
     line-height: 1.8rem;
 }
 .cyberNeonArticle{
-    font-family: PlusJakartaSans ;
     align-items: center;
     display: flex;
     margin: 5rem 30rem;
@@ -337,9 +354,27 @@ table {
     border-radius: 0.2rem;
     font-weight: bold;
 }
+
+.popUpInfo{
+    color: rgb(62, 62, 62);
+    text-shadow: 0 0 0.5px red;
+    word-spacing: 0.2rem ;
+    line-height: 1.5rem;
+    visibility: hidden;
+    display: flex;
+    text-align: center;
+}
+/* .invisible{
+    visibility: hidden;
+
+}; */
+
+.visible{
+    visibility: visible;
+
+}
 .sectionGrey{
     background-color: rgb(38, 44, 41);
-    font-family: PlusJakartaSans;
     display: flex;
     align-items: center;
     height: 25rem;
@@ -386,8 +421,8 @@ table {
 
 }
 .footer{
-    font: 0.9rem sans-serif;
-    font-family: PlusJakartaSans ;
+    font-size: 0.9rem;
+
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -420,4 +455,7 @@ table {
 }
 .marginFooterBloc{
     margin : 0 15rem;
+}
+.purple{
+    background-color: purple;
 }

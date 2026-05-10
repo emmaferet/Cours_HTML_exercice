@@ -1,23 +1,29 @@
 <!DOCTYPE html>
-<html lang="en" style="background-color:rgba(242, 244, 243)">
+<html lang="en" >
 
 <head>
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
+    <link href="./cours_HTML_001.css" rel="stylesheet"> 
     <title>Première page html test</title>
-    <link href="./cours_HTML_001.css" rel="stylesheet"/> 
+
 </head>
 
-<body >
+<body class ="backgroundColor">
     <header class="header"  >
         <h1 class="titreSite">Manga Archive</h1>
         <nav class="marginNav">
             <ul class="navigation">
                 <li>
-                    <a href="#" class="navButtons1">Catalog</a>
+                    <a href="catalog/catalog.html" class="navButtons">Catalog</a>
                 </li>
                 <li>
-                    <a href="#" class="navButtons">Collections</a>
+                    <a href="collections/collections.html" class="navButtons">Collections</a>
                 </li>
+                <!-- <li>
+                    <button type="button" class="btn btn-danger">DANGER</button>
+                </li> -->
                 <li>
                     <a href="#" class="navButtons">Pre-orders</a>
                 </li>
@@ -30,8 +36,8 @@
             </ul>
         </nav>
         <div class="rightAlign">
-            <a href="#" class="logInButton">Log In</a>
-            <a href="#" class="signUpButton">Sign Up</a>
+            <a href="#" class="logInButton" id="logInButton">Log In</a>
+            <a href="#" class="signUpButton" id="signUpButton">Sign Up</a>
         </div>
     </header>
     <main >
@@ -44,10 +50,13 @@
                 <p class="paragrapheKaguya">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, dolores eaque. Et tempore incidunt commodi itaque voluptatibus cupiditate voluptates quibusdam.</p>
                 <div class="listeAligneBlue">
                     <div>
-                        <a href="#" class="purchaseMButton" target="_blank">Purchase Masterpiece    </a>
+                        <a href="#" class="purchaseMButton" target="_blank" id="purchaseButtonM">Purchase Masterpiece    </a>
                         <img class="fitImageCaddie" src="icons8-caddie-24 (1).png" alt="emojiCaddie"> 
                     </div>
-                    <a href="#" class="technicalAnalysis" target="_blank">Technical Analysis</a>
+                    <div class="wrapper" >
+                        <button class="technicalAnalysis" id="technicalAnalysisToggle" popovertarget="hiddenText">Technical Analysis</button>
+                        <div class="styleHidden" id="hiddenText" popover ></div>
+                    </div>
                 </div>
             </article>
             <img class="fitImage" src="animeGirl.png" alt="Samurai anime girl"> 
@@ -93,7 +102,8 @@
                 <div>
                     <h3 class="editorialTitle">Editorial Summary</h3>
                     <p class="paragrapheEdit">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem illum consectetur provident soluta accusantium deleniti, sit reprehenderit iure? Voluptatum ut officia architecto. Beatae, in tempora!</p>
-                    <a href="#" class="reserveButton">Reserve Pre-Order</a>
+                    <a href="#" class="reserveButton" id="reserveButton">Reserve Pre-Order</a>
+                    <div class="popUpInfo" id="textHidden">Je suis VISIBLE</div>            
                 </div>
             </div>
         </article>
@@ -102,7 +112,7 @@
             <p class="greyParagraphe">Receive weekly deep-dives Lorem ipsum dolor. Lorem ipsum dolor sit amet.dlor sit amet consectetur adipisicing elit. Excepturi, in.</p>
             <div>
                 <input type="email" id="email" pattern=".+@exemple\.com" placeholder="Enter your email adress" class="mailStyle"/>
-                <a href="#" class="subscribeButton">Subscribe</a>
+                <a href="#" class="subscribeButton" id="subscribe">Subscribe</a>
             </div>
         </section>
     </main>
@@ -140,6 +150,7 @@
             </nav>
         </article>
     </footer>
+    <script src="cours_DOM.js"></script>
 </body>
 
 </html>
