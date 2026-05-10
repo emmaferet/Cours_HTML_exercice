@@ -90,3 +90,16 @@ reserveButton.addEventListener("mouseout", () => {
     // popReserve.classList.add("invisible");
     // popReserve.classList.remove("visible");
 })
+
+
+const allFooterNavButtons = document.querySelectorAll(".footerButtons");
+allFooterNavButtons.forEach((navButtons,index) => {
+    navButtons.addEventListener("pointerover", function(){
+        navButtons.classList.add("footerButtonsRed");
+        navButtons.classList.remove("footerButtons");
+    });
+    navButtons.addEventListener("pointerout", function(){
+        navButtons.classList.remove("footerButtonsRed");
+        navButtons.classList.add("footerButtons");
+    });
+});
