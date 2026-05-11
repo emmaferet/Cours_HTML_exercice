@@ -1,5 +1,3 @@
-// Imports
-
 
 
 const subscribeButton = document.getElementById("subscribe");
@@ -93,9 +91,7 @@ logInButton.addEventListener("mouseout", function (){
 //   $('[data-toggle="popover"]').popover()
 // });
 
-// Initialisation des popovers Bootstrap
-const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
-popoverTriggerList.forEach(el => new bootstrap.Popover(el));
+
 
 const reserveButton = document.getElementById("reserveButton")
 const popReserve = document.getElementById("textHidden")
@@ -122,3 +118,31 @@ allFooterNavButtons.forEach((navButtons,index) => {
         navButtons.classList.add("footerButtons");
     });
 });
+
+// Initialisation des popovers Bootstrap
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+popoverTriggerList.forEach(el => new bootstrap.Popover(el));
+
+// web storage //
+
+function choiceSidePopover (){
+    if (localStorage.getItem("popoverPlacement")){
+        return;
+    };
+    return prompt("Which side for the popover ? top, right, bottom, left", "right")  
+};
+
+const preferencePopover = choiceSidePopover();
+localStorage.setItem("popoverPlacement",preferencePopover);
+
+
+const buttonPopover = document.querySelector('[data-bs-toggle="popover"]');
+new bootstrap.Popover(buttonPopover, {
+    placement: preferencePopover
+});
+
+//ex local storage avec JSON
+const user = { "nom": "Emma", "age":"25"}
+
+// force l'interprétation comme un str
+localStorage.setItem("user", JSON.stringify(user));
