@@ -421,6 +421,9 @@ html, body {
     margin: 0.5rem;
 
 }
+.disabled{
+    display: none;
+}
 .footer{
     font-size: 0.9rem;
 

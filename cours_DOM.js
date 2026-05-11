@@ -1,3 +1,8 @@
+// Imports
+
+const { popper } = require("@popperjs/core");
+
+
 const subscribeButton = document.getElementById("subscribe");
 const maPopUp = document.createElement("div");
 
@@ -55,27 +60,33 @@ logInButton.addEventListener("mouseout", function (){
     // logInButton.classList.add("logInButton");
 });
 
-function clear(id){
-    document.getElementById(id).innerHTML = "";
-};
+// function clear(id){
+//     document.getElementById(id).innerHTML = "";
+// };
 
-function addPop(id,content){
-    document.getElementById(id).innerHTML = content;
-}
 
-const maPopUpElement = document.getElementById("hiddenText");
-addPop("hiddenText","Popover content omg wow plein de texte c'est fou pitié dommage il y a pas de lorem 15 ici lol");
 
-maPopUpElement.addEventListener("toggle", (event) => {
-    if (event.newState === "open"){
-        console.log("La fenêtre contextuelle a été affichée");
-    } 
-    else {
-        console.log("La fenêtre contextuelle a été masquée");
-    };
+// maPopUpElement.addEventListener("toggle", (event) => {
+//     if (event.newState === "open"){
+//         console.log("La fenêtre contextuelle a été affichée");
+//     } 
+//     else {
+//         console.log("La fenêtre contextuelle a été masquée");
+//     };
     
 
-});    
+// });    
+const maPopUpElement = document.getElementById("hiddenText");
+const monButton = document.getElementById("technicalAnalysisToggle")
+function addPop(id,content){
+    document.getElementById(id).innerHTML = content;
+};
+addPop("hiddenText","Popover content omg wow plein de texte c'est fou pitié dommage il y a pas de lorem 15 ici lol");
+
+
+popper.createPopper(monButton, maPopUpElement, {
+    placement: 'right',
+  });
 
 
 const reserveButton = document.getElementById("reserveButton")
