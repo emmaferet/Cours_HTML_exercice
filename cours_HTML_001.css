@@ -54,7 +54,37 @@ table {
 html, body {
     font-family: 'Plus Jakarta Sans', sans-serif !important;
 }
+/* 
+#button {
+  padding: 10px 20px;
+  border: none;
+  background: #6366f1;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-weight: 500;
+} */
 
+#tooltip {
+  background: #1e293b;
+  color: #f8fafc;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: sans-serif;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  pointer-events: none;
+  width: max-content;
+  max-width: 250px;
+
+  /* Animation states /
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  display: block; / Managed by opacity for transitions */
+  /* visibility: hidden; */
+}
 /* HEADER */
 .backgroundColor{
     background-color: rgb(235, 234, 233);
@@ -80,8 +110,7 @@ html, body {
     height: 5.5rem;
     position: sticky; 
     top: 0;
-    z-index: 999; 
-    /* Pourquoi z-index ? ça a l'air de fonctionner sans */
+    /* z index => ordre de priorité d'affichage */
 }
 .navigation{
     align-items: center;

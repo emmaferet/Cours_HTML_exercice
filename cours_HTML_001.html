@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
-    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
     <meta charset="UTF-8">
-    <link href="./cours_HTML_001.css" rel="stylesheet"> 
+    <link href="./cours_HTML_001.css" rel="stylesheet">
     <title>Première page html test</title>
 
 </head>
 
-<body class ="backgroundColor">
-    <header class="header"  >
+<body class="backgroundColor">
+    <!-- popper JS -->
+
+    <header class="header">
         <h1 class="titreSite">Manga Archive</h1>
         <nav class="marginNav">
             <ul class="navigation">
@@ -40,40 +45,45 @@
             <a href="#" class="signUpButton" id="signUpButton">Sign Up</a>
         </div>
     </header>
-    <main >
+    <main>
         <div class="lignKaguyaSamurai">
-            <article>               
+            <article>
                 <p class="blueBackground">CURATIVE ARCHIVE ● HTML STRUCTURE 101</p>
                 <h2 class="titreKaguya">KAGUYA</h2>
                 <h2 class="titreSamurai">SAMURAI</h2>
                 <!-- technique pour garder en un seul titre ?-->
-                <p class="paragrapheKaguya">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, dolores eaque. Et tempore incidunt commodi itaque voluptatibus cupiditate voluptates quibusdam.</p>
+                <p class="paragrapheKaguya">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, dolores
+                    eaque. Et tempore incidunt commodi itaque voluptatibus cupiditate voluptates quibusdam.</p>
                 <div class="listeAligneBlue">
                     <div>
-                        <a href="#" class="purchaseMButton" target="_blank" id="purchaseButtonM" >Purchase Masterpiece    </a>
-                        <img class="fitImageCaddie" src="icons8-caddie-24 (1).png" alt="emojiCaddie"> 
+                        <a href="#" class="purchaseMButton" target="_blank" id="purchaseButtonM">Purchase Masterpiece
+                        </a>
+                        <img class="fitImageCaddie" src="icons8-caddie-24 (1).png" alt="emojiCaddie">
                     </div>
-                    <div class="wrapper" >
-                        <button class="technicalAnalysis" id="technicalAnalysisToggle" popovertarget="hiddenText">Technical Analysis</button>
-                        <div class="styleHidden" id="hiddenText" popover ></div>
+                    <div class="wrapper">
+                        <button class ="technicalAnalysis" data-bs-toggle="popover" data-bs-placement="top" 
+                        data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Technical
+                            Analysis</button>                       
                     </div>
                 </div>
             </article>
-            <img class="fitImage" src="animeGirl.png" alt="Samurai anime girl"> 
-        </div>      
+            <img class="fitImage" src="animeGirl.png" alt="Samurai anime girl">
+        </div>
         <section class="sectionBlue">
             <div class="listeAligneBlue">
                 <img class="fitImageBlue" src="pngegg_consolebash.png" alt="console bash emoji">
                 <h3 class="sectionBlueTitreh3">The &lt;section&gt; Element</h3>
             </div>
-            <p class="sectionBlueParagraphe">Ipsum ipsa eius eligendi hic omnis mollitia!Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum cum ipsa iure maxime eveniet id ab aliquam pariatur, nobis recusandae.</p>
+            <p class="sectionBlueParagraphe">Ipsum ipsa eius eligendi hic omnis mollitia!Lorem ipsum, dolor sit amet
+                consectetur adipisicing elit. Nostrum cum ipsa iure maxime eveniet id ab aliquam pariatur, nobis
+                recusandae.</p>
         </section>
         <article class="cyberNeonArticle">
             <h2 class="titreCyberNeonArchive">CYBER-NEON ARCHIVE</h2>
             <span class="lignSeparate"></span>
-            <img class="cropImage" src="./cyberpsycho.png" alt="cyberpsycho"/>
+            <img class="cropImage" src="./cyberpsycho.png" alt="cyberpsycho" />
             <div class="listeAligne">
-                <div >    
+                <div>
                     <h3 class="techTitle">Technical Specifications</h3>
                     <ul>
                         <li>
@@ -83,7 +93,7 @@
                             </div>
                             <span class="ligneSepTableauListe"></span>
                         </li>
-                        <li >
+                        <li>
                             <div class="listeAligne">
                                 <p class="titreTableauListe">Material</p>
                                 <p class="variableTableauListe2">High-Grade ABS & PVC</p>
@@ -101,26 +111,32 @@
                 </div>
                 <div>
                     <h3 class="editorialTitle">Editorial Summary</h3>
-                    <p class="paragrapheEdit">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem illum consectetur provident soluta accusantium deleniti, sit reprehenderit iure? Voluptatum ut officia architecto. Beatae, in tempora!</p>
+                    <p class="paragrapheEdit">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem illum
+                        consectetur provident soluta accusantium deleniti, sit reprehenderit iure? Voluptatum ut officia
+                        architecto. Beatae, in tempora!</p>
                     <a href="#" class="reserveButton" id="reserveButton">Reserve Pre-Order</a>
-                    <div class="popUpInfo" id="textHidden">Je suis VISIBLE</div>            
+                    <div class="popUpInfo" id="textHidden">Je suis VISIBLE</div>
                 </div>
             </div>
         </article>
         <section class="sectionGrey">
             <h3 class="titleTechnicalCircle">Join the Technical Circle</h3>
-            <p class="greyParagraphe">Receive weekly deep-dives Lorem ipsum dolor. Lorem ipsum dolor sit amet.dlor sit amet consectetur adipisicing elit. Excepturi, in.</p>
+            <p class="greyParagraphe">Receive weekly deep-dives Lorem ipsum dolor. Lorem ipsum dolor sit amet.dlor sit
+                amet consectetur adipisicing elit. Excepturi, in.</p>
             <div>
-                <input type="email" id="email" pattern=".+@exemple\.com" placeholder="Enter your email adress" class="mailStyle"/>
+                <input type="email" id="email" pattern=".+@exemple\.com" placeholder="Enter your email adress"
+                    class="mailStyle" />
                 <a href="#" class="subscribeButton" id="subscribe">Subscribe</a>
             </div>
         </section>
     </main>
-    <footer >
+    <footer>
         <article class="footer">
             <div class="marginFooterBloc">
                 <h3 class="titreFooter">EDITORIAL MANGA SHOWCASE</h3>
-                <p >@ 2024 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam maxime modi dolores fuga facere iste impedit autem culpa ipsum, delectus libero! Maxime minus molestias quam enim velit nisi sequi tenetur?</p>
+                <p>@ 2024 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam maxime modi dolores fuga
+                    facere iste impedit autem culpa ipsum, delectus libero! Maxime minus molestias quam enim velit nisi
+                    sequi tenetur?</p>
             </div>
             <nav class="navigationFooter">
                 <ul>
@@ -132,7 +148,7 @@
                     </li>
                 </ul>
                 <ul>
-                    <li class="marginFooter">                        
+                    <li class="marginFooter">
                         <a href="#" class="footerButtons">HTML SEMANTICS</a>
                     </li>
                     <li class="marginFooter">
@@ -150,6 +166,7 @@
             </nav>
         </article>
     </footer>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="cours_DOM.js"></script>
 </body>
 

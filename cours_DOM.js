@@ -1,6 +1,5 @@
 // Imports
 
-const { popper } = require("@popperjs/core");
 
 
 const subscribeButton = document.getElementById("subscribe");
@@ -76,18 +75,27 @@ logInButton.addEventListener("mouseout", function (){
     
 
 // });    
-const maPopUpElement = document.getElementById("hiddenText");
-const monButton = document.getElementById("technicalAnalysisToggle")
-function addPop(id,content){
-    document.getElementById(id).innerHTML = content;
-};
-addPop("hiddenText","Popover content omg wow plein de texte c'est fou pitié dommage il y a pas de lorem 15 ici lol");
+// const maPopUpElement = document.getElementById("hiddenText");
+// const monButton = document.getElementById("technicalAnalysisToggle")
+// function addPop(id,content){
+//     document.getElementById(id).innerHTML = content;
+// };
+// addPop("hiddenText","Popover content omg wow plein de texte c'est fou pitié dommage il y a pas de lorem 15 ici lol");
 
+//const popperInstance = popper.
+// const button = document.querySelector('#technicalAnalysisToggle');
+// const tooltip = document.querySelector('#tooltip');
 
-popper.createPopper(monButton, maPopUpElement, {
-    placement: 'right',
-  });
+// const popperInstance = Popper.createPopper(button, tooltip);
 
+// $(function () {
+//   // Active tous les popovers de la page
+//   $('[data-toggle="popover"]').popover()
+// });
+
+// Initialisation des popovers Bootstrap
+const popoverTriggerList = document.querySelectorAll('[data-bs-toggle="popover"]');
+popoverTriggerList.forEach(el => new bootstrap.Popover(el));
 
 const reserveButton = document.getElementById("reserveButton")
 const popReserve = document.getElementById("textHidden")
