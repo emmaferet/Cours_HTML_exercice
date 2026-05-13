@@ -132,17 +132,114 @@ function choiceSidePopover (){
     return prompt("Which side for the popover ? top, right, bottom, left", "right")  
 };
 
-const preferencePopover = choiceSidePopover();
-localStorage.setItem("popoverPlacement",preferencePopover);
+//mettre dans un if pour vérifier si popover placement déjà existant
+// const preferencePopover = choiceSidePopover();
+// localStorage.setItem("popoverPlacement",preferencePopover);
 
 
-const buttonPopover = document.querySelector('[data-bs-toggle="popover"]');
-new bootstrap.Popover(buttonPopover, {
-    placement: preferencePopover
-});
+// const buttonPopover = document.querySelector('[data-bs-toggle="popover"]');
+// new bootstrap.Popover(buttonPopover, {
+//     placement: preferencePopover
+// });
 
 //ex local storage avec JSON
-const user = { "nom": "Emma", "age":"25"}
+const user = { "nom": "Emma", "age":"25"};
 
-// force l'interprétation comme un str
+// force l'interprétation comme un str pour éviter {object Object}
 localStorage.setItem("user", JSON.stringify(user));
+
+// promesses
+
+// function effectuerUneTache(callback){
+//     console.log("effectuer une tache ....");
+//     //simuler un délai
+//     setTimeout(function (){
+//         console.log("tache terminée !");
+//         callback(); // Appel du callback
+//     },2000);
+// }
+//en général pas plus de 2 fonctions en callback
+
+// function monCallback(){
+//     console.log("le callback a été appelé !");
+// }
+
+// effectuerUneTache(monCallback);
+
+// async function  connectLogin(name,mdp, appelleAPI){
+//     if (name && mdp){
+//         await appelleAPI(name,mdp)
+//     }
+//     return console.log("erreur")
+// };
+
+// function connectAPI1(name,mdp){
+//     return console.log(`L'utilisateur ${name} est connecté sur l'API1`);
+// };
+
+// function connectAPI2(name,mdp){
+//     return console.log(`L'utilisateur ${name} est connecté sur l'API2`);
+// };
+
+// connectLogin("Emma","mdp",connectAPI1)  
+
+
+// Les objets / classes
+class Person {
+    constructor(nom,prenom,age,sexe){
+        this.nom = nom;
+        this.prenom = prenom;
+        this.age = age;
+        this.sexe = sexe;
+    };
+    sayHello(){
+        console.log(`Mon nom est ${this.nom} ${this.prenom}, j'ai ${this.age}, je suis de sexe ${this.sexe} !`)
+    };
+};
+
+const person1 = new Person("Feret","Emma",25,"feminin");
+const person2 = new Person("El Gueder","Etienne",25,"masculin")
+
+person1.sayHello();
+person2.sayHello();
+
+
+//Exemple de Classe pour changer html 
+class Voiture{
+    constructor(marque,couleur,km){
+        this.marque = marque;
+        this.couleur = couleur;
+        this.km = km;
+    };
+    displayColor(){
+        const couleurVoiture = document.getElementById("imageVoiture");
+        if (this.couleur == "blue"){
+            couleurVoiture.setAttribute("src","./asset/bleu.jpg")
+        };
+        if (this.couleur == "red"){
+            couleurVoiture.setAttribute("src","./asset/rouge.png")
+        };
+    };
+};
+// const voitureBlue = new Voiture("Toyota","Blue");
+// const voitureRed = new Voiture("Toyota","red");
+
+// voitureRed.displayColor();
+// voitureBlue.displayColor();
+
+
+//Recuperer la valeur rentrée par user
+//Lors du clic sur button go, récuperer valeur et l'attribuer à la propriété couleur voiture
+//Faire en sorte que la bonne img s'affiche selon l'entrée 
+
+
+const submitColor = document.getElementById("submitColor");
+//si creation de l'objet dans if chaque nouvelle instance créé un nouvel objet
+//donc créé l'objet avant et mettre à jour l'attribut au clic
+const voitureColored = new Voiture()
+
+submitColor.addEventListener("click",function(){
+    const colorInput = document.getElementById("inputCar").value.toLowerCase();
+    voitureColored.couleur = colorInput;
+    voitureColored.displayColor();
+});
